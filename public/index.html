@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|Lobster|Questrial" rel="stylesheet">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Daily Pike</title>
+  <style>
+    body {
+      background-color: rgb(179, 165, 156);
+    }
+    
+    .jumboImg {
+      background-image: url("../images/cafe2.jpg");
+      height: 600px;
+      color: white; 
+      font-weight: 700px;
+    }
+
+    .yourPike {
+      font-family: 'Lobster', cursive;
+      font-size: 48px;
+    }
+
+    .thePike {
+      font-family: 'Cinzel', serif;
+    }
+
+    .yourSource {
+      font-family: 'Questrial', sans-serif;
+      margin-left: 150px;
+    }
+
+    .scrape {
+      margin-left: 20px;
+    }
+
+    .item {
+      border: 1px solid black;
+      padding: 20px;
+      margin: 10px;
+      background: rgb(211, 207, 204);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .itemTitle {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .itemLink {
+      font-size: 18px;
+    }
+
+    .save {
+      border: 1px solid black;
+      background:  rgb(141, 101, 84);
+      color: white;
+    }
+
+    #wrapper {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 5%;
+     
+    }
+
+    #articles {
+      display: inline-block;
+      overflow: auto;
+      width: 90%;
+      height: 700px;
+      text-align: left;
+      padding: 10px;
+      border: 2px solid black;
+    }
+
+    #notes {
+      float: right;
+      width: 30%;
+    }
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      background-color: #FCF5C7;
+    }
+
+    input {
+      height: 36px;
+      font-size: 24px;
+    }
+
+    textarea {
+      height: 200px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">The Daily Pike</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./saved.html">Saved Articles</a>
+        </li>
+        <li>
+            <button class="btn btn-outline-dark scrape my-sm-0" type="submit">Scrape</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumboImg">
+    <h1 class="display-4 thePike">The Daily Pike</h1>
+    <p class="lead yourSource">Your easy source for daily news.</p>
+    <hr class="my-4">
+  </div>
+  <div id="wrapper" class="text-center">
+    <h1 class="mb-5 yourPike">Your Daily Pike</h1>
+    <div id="articles"></div>
+    <div id="notes"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

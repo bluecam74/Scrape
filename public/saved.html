@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saved Articles</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|Lobster|Questrial" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(179, 165, 156);
+        }
+        .brickLeft {
+            background-image: url("../images/brick-left.jpg")
+        }
+
+        .brickRight {
+            background-image: url("../images/brick-right.jpeg")
+        }
+        .yourPike {
+            font-family: 'Lobster', cursive;
+            font-size: 48px;
+        }
+
+        .thePike {
+            font-family: 'Cinzel', serif;
+        }
+
+        .yourSource {
+            font-family: 'Questrial', sans-serif;
+            margin-left: 150px;
+        }
+
+        #yourNotes {
+            font-family: 'Lobster', cursive;
+            font-size: 28px;
+            text-align: center;
+
+        }
+
+        .saved-articles {
+            /* border: 1px solid black; */
+            display: inline-block;
+            overflow: auto;
+            width: 80%;
+            height: 700px;
+            padding: 10px;
+            margin-left: 50px;
+        }
+
+        .saved-articles-box {
+            display: inline-block;
+            overflow: auto;
+            width: 90%;
+            height: 700px;
+            text-align: left;
+            padding: 10px;
+            border-top: 2px solid black;
+        }
+
+        .saved-header {
+            font-family: 'Lobster', cursive;
+            font-size: 48px;
+            text-align: center;
+            margin-left: 20px;
+
+        }
+
+        .item {
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px;
+            background: rgb(211, 207, 204);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .itemTitle {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .itemLink {
+            font-size: 18px;
+        }
+
+        .save {
+            border: 1px solid black;
+            background: rgb(141, 101, 84);
+            color: white;
+        }
+
+        .unsave {
+            border: 1px solid black;
+            background: rgb(141, 101, 84);
+            color: white;
+        }
+        
+        .addNote {
+            border: 1px solid black;
+            background: rgb(141, 101, 84);
+            color: white;
+            margin-left: 20px;
+        }
+
+        #savenote {
+            border: 1px solid black;
+            background: rgb(141, 101, 84);
+            color: white;
+        }
+
+
+        #articles {
+            display: inline-block;
+            overflow: auto;
+            width: 90%;
+            height: 700px;
+            text-align: left;
+            padding: 10px;
+            border: 2px solid black;
+        }
+        .saved-page{
+            padding: 0;
+            margin: 0;
+
+        }
+        #notes {
+            margin: 90px 10px 0 0;
+            padding: 20px;
+            max-height: 600px;
+            border: 1px solid black;
+            background: rgb(211, 207, 204);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px 10px 0 10px;
+        }
+
+        #titleinput {
+            width: 80%;
+            margin-bottom: 8px;
+        }
+
+        #bodyinput {
+            width: 95%;
+            height: 130px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">The Daily Pike</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./saved.html">Saved Articles</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row saved-page">
+        <div class="col-md-1 brickLeft"></div>
+        <div class="col-md-6 saved-articles justify-contents-center">
+            <div class="row saved-header justify-contents-center text-center">Your Saved Articles</div>
+            <div class="row justify-contents-center saved-articles-box"></div>
+        </div>
+        <div class="col-md-3 notes-box">
+            <div id = "notes">
+                <p id="yourNotes">Your Notes ...</p>
+            </div>
+        </div>
+        <div class="col-md-1 brickRight"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
