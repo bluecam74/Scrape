@@ -99,8 +99,9 @@ app.get("/scrape", function(req, res) {
   });
 
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "./index.html"));
+    res.json(path.join(__dirname, "public/index.html"));
   });
+  
   
   // Route for grabbing a specific Article by id, populate it with it's note
   app.get("/articles/:id", function(req, res) {
