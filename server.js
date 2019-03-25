@@ -25,6 +25,13 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 // mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
 
 app.get("/scrape", function(req, res) {
+  // app.delete("/scrape", function(req, res) {
+    db.Article.remove({})
+      .then(function(dbArticle) {
+        console.log(dbArticle);
+      });
+  // });
+
     // First, we grab the body of the html with axios
     axios.get("https://www.ocregister.com/").then(function(response) {
       // Then, we load that into cheerio and save it to $ for a shorthand selector
@@ -78,9 +85,11 @@ app.get("/scrape", function(req, res) {
             console.log(err);
           });
       });
-  
+      res.redirect("/index.html");
       // Send a message to the client
       res.send("Scrape Complete");
+
+      
     });
   });
   
@@ -156,10 +165,6 @@ app.get("/scrape", function(req, res) {
         res.json(dbArticle);
       });
       });
-  // Start the server
-
-//   var port_number = server.listen(process.env.PORT || 3000);
-// app.listen(port_number);
 
   app.listen((process.env.PORT || 3000), function() {
     console.log("App running on port " + PORT + "!");

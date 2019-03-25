@@ -44,7 +44,6 @@ $.getJSON("/articles", function(data) {
     })
     .then(function (data) {
       console.log(data);
-      //window.location.href = "/index.html";
     })
     
     })
