@@ -161,7 +161,7 @@ app.get("/scrape", function(req, res) {
 //   var port_number = server.listen(process.env.PORT || 3000);
 // app.listen(port_number);
 
-  app.listen(PORT, function() {
+  app.listen((process.env.PORT || 3000), function() {
     console.log("App running on port " + PORT + "!");
   });
   
