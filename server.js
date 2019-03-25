@@ -3,6 +3,7 @@ let logger = require("morgan");
 let mongoose = require("mongoose");
 let axios = require("axios");
 let cheerio = require("cheerio");
+let path = require("path");
 
 // Require all models
 let db = require("./models");
@@ -96,6 +97,10 @@ app.get("/scrape", function(req, res) {
         res.json(err);
       });
   });
+
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "./index.html"));
+  });
   
   // Route for grabbing a specific Article by id, populate it with it's note
   app.get("/articles/:id", function(req, res) {
@@ -152,11 +157,11 @@ app.get("/scrape", function(req, res) {
       });
   // Start the server
 
-var port_number = server.listen(process.env.PORT || 3000);
-app.listen(port_number);
+//   var port_number = server.listen(process.env.PORT || 3000);
+// app.listen(port_number);
 
-  // app.listen(PORT, function() {
-  //   console.log("App running on port " + PORT + "!");
-  // });
+  app.listen(PORT, function() {
+    console.log("App running on port " + PORT + "!");
+  });
   
 
