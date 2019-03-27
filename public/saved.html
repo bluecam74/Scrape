@@ -10,6 +10,13 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|Lobster|Questrial" rel="stylesheet">
     <style>
+
+        * {
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box;
+        }
+
         body {
             background-color: rgb(179, 165, 156);
         }
@@ -135,7 +142,6 @@
             border: 1px solid black;
             background: rgb(211, 207, 204);
             font-family: Arial, Helvetica, sans-serif;
-            margin: 50px 10px 0 10px;
         }
 
         #titleinput {
@@ -173,7 +179,7 @@
     </nav>
 
     <div class="row saved-page">
-        <div class="col-md-1 brickLeft"></div>
+        <div class="col-md brickRight"></div>
         <div class="col-md-8 saved-articles justify-contents-center">
             <div class="row saved-header justify-contents-center text-center">Your Saved Articles</div>
             <div class="row justify-contents-center saved-articles-box"></div>
@@ -183,7 +189,7 @@
                 <p id="yourNotes">Your Notes ...</p>
             </div>
         </div>
-        <div class="col-md-1 brickRight"></div>
+        <div class="col-md brickLeft"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
