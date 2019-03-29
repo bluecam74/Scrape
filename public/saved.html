@@ -23,6 +23,7 @@
         .brickLeft {
             background-image: url("../images/brick-left.jpg");
             width: 100%;
+            height: 1000px;
         }
 
         .brickRight {
@@ -56,14 +57,14 @@
             overflow: auto;
             width: 80%;
             height: 700px;
-            padding: 10px;
+            padding: 30px 10px;
             margin-left: 50px;
         }
 
         .saved-articles-box {
             display: inline-block;
             overflow: auto;
-            width: 90%;
+            width: 100%;
             height: 700px;
             text-align: left;
             padding: 10px;
@@ -144,6 +145,10 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        .notes-box {
+            padding-right: 40px;
+        }
+
         #titleinput {
             width: 80%;
             margin-bottom: 8px;
@@ -180,11 +185,11 @@
 
     <div class="row saved-page">
         <div class="col-md brickRight"></div>
-        <div class="col-md-8 saved-articles justify-contents-center">
+        <div class="col-md-7 saved-articles justify-contents-center">
             <div class="row saved-header justify-contents-center text-center">Your Saved Articles</div>
             <div class="row justify-contents-center saved-articles-box"></div>
         </div>
-        <div class="col-md-2 notes-box">
+        <div class="col-md-3 notes-box">
             <div id = "notes">
                 <p id="yourNotes">Your Notes ...</p>
             </div>
