@@ -1,7 +1,7 @@
 
 
 #  The Daily Pike 
-#### Full Stack Application
+ _Full Stack Application_
 
 #### Deployed Link:
 * https://scrape-news-notes.herokuapp.com/
