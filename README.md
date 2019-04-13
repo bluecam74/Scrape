@@ -17,7 +17,7 @@ Demonstrates scraping method by showing news articles from the Orange County Reg
 
 ***
 
-<p align="center"><img src="./public/images/ScrapeScrnSht2.png" alt=“Scrape Preview Top” width="675"></p>
+<p align="center"><img src="./public/images/ScrapeScrnSht3.png" alt=“Scrape Preview Top” width="675"></p>
 
 ***
 
